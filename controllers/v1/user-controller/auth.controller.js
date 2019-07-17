@@ -3,6 +3,7 @@ let db = require('../../../config/connection');
 let queries = require('../../../config/queries/quries');
 let sequelize = require('sequelize');
 let crypto = require('crypto');
+let helperFunction = require('../../../helpers/commonFunctions')
 
 function signUp(req, res, next) {
     let created = new Date();
@@ -18,17 +19,11 @@ function signUp(req, res, next) {
 
     if (email !== undefined && password !== undefined && username !== undefined && type !== undefined) {
         if (email === '' || password === '' || username === '' || type === '') {
-            return res.status(200).send({
-                message: config.errors.empty_parameter,
-                error: true
-            });
+            helperFunction.apiReponse({}, config.errors.empty_parameter, true, 200, res)
         } else {
             if (!image) {
-                return res.status(200).send({
-                    message: 'no image',
-                    error: true
-                });
-            } else if(image.mimetype === "image/jpeg" ||image.mimetype === "image/png"||image.mimetype === "image/gif" ) {
+                helperFunction.apiReponse({}, 'No image', true, 200, res)
+            } else if (image.mimetype === "image/jpeg" || image.mimetype === "image/png" || image.mimetype === "image/gif") {
 
                 //check if thee user already exists
                 db.query(queries.checkEmailCellPhone('emailPhone'), {
@@ -42,28 +37,17 @@ function signUp(req, res, next) {
                     if (user.length === 0) {
                         signUpUser(name, username, email, phone, hashPassword, image, type, createdAt, res);
                     } else {
-                        return res.status(200).send({
-                            data: {},
-                            message: config.errors.user_already_exists,
-                            error: true
-                        })
+                        helperFunction.apiReponse({}, config.errors.user_already_exists, true, 200, res)
                     }
 
                 }).catch(function (err) {
-                    return res.status(200).send({
-                        message: config.errors.db_error,
-                        error: true,
-                        err: err
-                    })
+                    helperFunction.apiReponse({}, config.errors.db_error, true, 200, res)
                 })
             }
         }
 
     } else {
-        return res.status(400).send({
-            message: config.errors.insufficient_parameters,
-            error: true
-        });
+        helperFunction.apiReponse({}, config.errors.insufficient_parameters, true, 400, res)
     }
 }
 
@@ -98,23 +82,12 @@ function signUpUser(name, username, email, phone, hashPassword, image, type, cre
         logging: false
     }).then(function (userData) {
         if (userData) {
-            return res.status(200).send({
-                data: responseObject,
-                message: config.success.user_registration,
-                error: false
-            })
+            helperFunction.apiReponse(responseObject, config.success.user_registration, false, 200, res)
         } else {
-            return res.status(200).send({
-                data: {},
-                message: config.errors.user_already_exists,
-                error: false
-            })
+            helperFunction.apiReponse({}, config.errors.user_already_exists, false, 200, res)
         }
     }).catch(function (err) {
-        return res.status(400).send({
-            message: config.errors.db_error,
-            error: true
-        });
+        helperFunction.apiReponse({}, config.errors.db_error, true, 400, res)
     })
 }
 
