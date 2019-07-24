@@ -1,4 +1,4 @@
-let methods = {
+let helperFunctions = {
     apiReponse(data, message, error, status, res,) {
         res.status(status).send({
             data: data,
@@ -8,4 +8,4 @@ let methods = {
     }
 };
 
-module.exports = methods;
+module.exports = helperFunctions;
