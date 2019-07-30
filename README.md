@@ -17,7 +17,7 @@ Use Express for requests routing and middlewares. There are some essential middl
 
 Sequelize, an ORM for SQL databases, is already integrated, you just have to set the authentication configurations.
 
-It's also setup with ESLint to make it easy to ensure a code styling and find code smells.
+It's also setup with <b> ESLint </b> to make it easy to ensure a code styling and find code smells.
 
 ## Requirements
 
