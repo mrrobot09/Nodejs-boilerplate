@@ -1,7 +1,7 @@
 # Nodejs-Boilerplate-express-es2018
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![6.2.0](https://badge.fury.io/js/express-rest-es2018-boilerplate.svg)](https://badge.fury.io/js/express-rest-es2017-boilerplate) [![Build Status](https://travis-ci.org/danielfsousa/express-rest-es2018-boilerplate.svg?branch=master)](https://travis-ci.org/danielfsousa/express-rest-es2018-boilerplate) [![Coverage Status](https://coveralls.io/repos/github/danielfsousa/express-rest-es2018-boilerplate/badge.svg?branch=master)
 
-Boilerplate/Generator/Starter Project for building RESTful APIs and microservices using Node.js, Express and MongoDB
+Boilerplate Project for building RESTful APIs and microservices using Node.js, Express and MySql.
 
 ## Features
 
