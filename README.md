@@ -1,44 +1,172 @@
-# Nodejs-boilerplate
-Boilerplate Project for building RESTful APIs using Node.js, Express and MySql
+# Express ES2017 REST API Boilerplate
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![npm version](https://badge.fury.io/js/express-rest-es2017-boilerplate.svg)](https://badge.fury.io/js/express-rest-es2017-boilerplate) [![Build Status](https://travis-ci.org/danielfsousa/express-rest-es2017-boilerplate.svg?branch=master)](https://travis-ci.org/danielfsousa/express-rest-es2017-boilerplate) [![Coverage Status](https://coveralls.io/repos/github/danielfsousa/express-rest-es2017-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/danielfsousa/express-rest-es2017-boilerplate?branch=master)[![Greenkeeper badge](https://badges.greenkeeper.io/danielfsousa/express-rest-es2017-boilerplate.svg)](https://greenkeeper.io/)
 
-<b>Multilayer folder structure</b>
+Boilerplate/Generator/Starter Project for building RESTful APIs and microservices using Node.js, Express and MongoDB
 
-Use of Best Practices of Node js and Clean Architecture focused on codebase scalability.
+## Features
 
-<b>Scalable and easy to use web server</b>
-Use Express for requests routing and middlewares. There are some essential middlewares for web APIs already setup, like body-parser, CORS and method-override.
+ - No transpilers, just vanilla javascript
+ - ES2017 latest features like Async/Await
+ - CORS enabled
+ - Uses [yarn](https://yarnpkg.com)
+ - Express + MongoDB ([Mongoose](http://mongoosejs.com/))
+ - Consistent coding styles with [editorconfig](http://editorconfig.org)
+ - [Docker](https://www.docker.com/) support
+ - Uses [helmet](https://github.com/helmetjs/helmet) to set some HTTP headers for security
+ - Load environment variables from .env files with [dotenv](https://github.com/rolodato/dotenv-safe)
+ - Request validation with [joi](https://github.com/hapijs/joi)
+ - Gzip compression with [compression](https://github.com/expressjs/compression)
+ - Linting with [eslint](http://eslint.org)
+ - Tests with [mocha](https://mochajs.org), [chai](http://chaijs.com) and [sinon](http://sinonjs.org)
+ - Code coverage with [istanbul](https://istanbul.js.org) and [coveralls](https://coveralls.io)
+ - Git hooks with [husky](https://github.com/typicode/husky) 
+ - Logging with [morgan](https://github.com/expressjs/morgan)
+ - Authentication and Authorization with [passport](http://passportjs.org)
+ - API documentation geratorion with [apidoc](http://apidocjs.com)
+ - Continuous integration support with [travisCI](https://travis-ci.org)
+ - Monitoring with [pm2](https://github.com/Unitech/pm2)
 
-<b>Database integration</b>
+## Requirements
 
-Sequelize, an ORM for SQL databases, is already integrated, you just have to set the authentication configurations.
+ - [Node v7.6+](https://nodejs.org/en/download/current/) or [Docker](https://www.docker.com/)
+ - [Yarn](https://yarnpkg.com/en/docs/install)
 
-<b>CLI integration</b>
+## Getting Started
 
-Both the application and Sequelize have command-line tools to make it easy to work with them. Check the Scripts section to know more about this feature.
-Logging
+Clone the repo and make it yours:
 
-It's also setup with ESLint to make it easy to ensure a code styling and find code smells.
+```bash
+git clone --depth 1 https://github.com/danielfsousa/express-rest-es2017-boilerplate
+cd express-rest-es2017-boilerplate
+rm -rf .git
+```
 
-<h2>Requirements</h2>
+Install dependencies:
 
-<ul>
-  <li> Node v10.8 </li>
-  <li> Npm </li>
-</ul>
+```bash
+yarn
+```
 
-<h2>Getting Started</h2>
+Set environment variables:
 
-<p> Clone the repo and make it yours: </p>
+```bash
+cp .env.example .env
+```
 
-<div class="jumbotron"> git clone --depth 1 https://github.com/mrrobot09/Nodejs-boilerplate/
-  
-cd Nodejs-boilerplae </div>
+## Running Locally
 
-<p> Install dependencies </p>
+```bash
+yarn dev
+```
 
-<div> npm install </div>
+## Running in Production
 
-<h2>Running Locally</h2>
+```bash
+yarn start
+```
 
-<div> npm start </div>
+## Lint
 
+```bash
+# lint code with ESLint
+yarn lint
+
+# try to fix ESLint errors
+yarn lint:fix
+
+# lint and watch for changes
+yarn lint:watch
+```
+
+## Test
+
+```bash
+# run all tests with Mocha
+yarn test
+
+# run unit tests
+yarn test:unit
+
+# run integration tests
+yarn test:integration
+
+# run all tests and watch for changes
+yarn test:watch
+
+# open nyc test coverage reports
+yarn coverage
+```
+
+## Validate
+
+```bash
+# run lint and tests
+yarn validate
+```
+
+## Logs
+
+```bash
+# show logs in production
+pm2 logs
+```
+
+## Documentation
+
+```bash
+# generate and open api documentation
+yarn docs
+```
+
+## Docker
+
+```bash
+# run container locally
+yarn docker:dev
+or
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+# run container in production
+yarn docker:prod
+or
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
+
+# run tests
+yarn docker:test
+or
+docker-compose -f docker-compose.yml -f docker-compose.test.yml up
+```
+
+## Deploy
+
+Set your server ip:
+
+```bash
+DEPLOY_SERVER=127.0.0.1
+```
+
+Replace my Docker username with yours:
+
+```bash
+nano deploy.sh
+```
+
+Run deploy script:
+
+```bash
+yarn deploy
+or
+sh ./deploy.sh
+```
+
+## Tutorials
+ - [Create API Documentation Using Squarespace](https://selfaware.blog/home/2018/6/23/api-documentation)
+
+## Inspirations
+
+ - [KunalKapadia/express-mongoose-es6-rest-api](https://github.com/KunalKapadia/express-mongoose-es6-rest-api)
+ - [diegohaz/rest](https://github.com/diegohaz/rest)
+
+## License
+
+[MIT License](README.md) - [Daniel Sousa](https://github.com/danielfsousa)
