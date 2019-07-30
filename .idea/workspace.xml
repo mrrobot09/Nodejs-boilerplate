@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b80d1fc9-eeaa-412e-9869-98a46a0973d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/constant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/default/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queries/quries.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/queries/quries.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/v1/user-controller/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/v1/user-controller/auth.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/commonFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/commonFunctions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/services/auth.service.js" afterDir="false" />
-    </list>
+    <list default="true" id="b80d1fc9-eeaa-412e-9869-98a46a0973d2" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -119,30 +107,46 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="1" />
+          <entry key="js" value="2" />
           <entry key="json" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="1" />
+          <entry key="JavaScript" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="js" value="21" />
           <entry key="json" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="14" />
+          <entry key="JavaScript" value="21" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/v1/user-controller/auth.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="185" column="2" lean-forward="true" selection-start-line="185" selection-start-column="2" selection-end-line="185" selection-end-column="2" />
+              <folding>
+                <element signature="n#!!block;n#signIn#0" />
+                <element signature="n#!!block;n#signUp#0" />
+                <element signature="n#!!block;n#changePassword#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -161,11 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/db-schema.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+            <state relative-caret-position="225">
+              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -175,15 +179,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
               <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/default/default.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -321,6 +316,24 @@
               <item name="Nodejs-boilerplate" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Nodejs-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nodejs-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nodejs-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nodejs-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Nodejs-boilerplate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Nodejs-boilerplate" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+              <item name="user-controller" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -402,18 +415,17 @@
       <workItem from="1563874048187" duration="2019000" />
       <workItem from="1563943241298" duration="16434000" />
       <workItem from="1564232576470" duration="4962000" />
-      <workItem from="1564510164370" duration="488000" />
+      <workItem from="1564510164370" duration="753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98242000" />
+    <option name="totallyTimeSpent" value="98507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.14455917" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.14455917" />
       <window_info id="Structure" order="1" sideWeight="0.502008" side_tool="true" weight="0.17237009" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -428,7 +440,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006337" side_tool="true" weight="0.28167117" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49936628" visible="true" weight="0.23972602" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49936628" visible="true" weight="0.23972602" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="bottom" id="Floobits" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -626,18 +638,6 @@
     <entry file="file://$PROJECT_DIR$/helpers/commonFunctions.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/v1/user-controller/auth.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="185" column="2" lean-forward="true" selection-start-line="185" selection-start-column="2" selection-end-line="185" selection-end-column="2" />
-          <folding>
-            <element signature="n#!!block;n#signIn#0" />
-            <element signature="n#!!block;n#signUp#0" />
-            <element signature="n#!!block;n#changePassword#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/default/default.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -703,8 +703,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/db-schema.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        <state relative-caret-position="225">
+          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/v1/user-controller/auth.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="185" column="2" lean-forward="true" selection-start-line="185" selection-start-column="2" selection-end-line="185" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!block;n#signIn#0" />
+            <element signature="n#!!block;n#signUp#0" />
+            <element signature="n#!!block;n#changePassword#0" />
+          </folding>
         </state>
       </provider>
     </entry>
