@@ -49,13 +49,13 @@ npm start
 
 ```bash
 # lint code with ESLint
-yarn lint
+npm lint
 
 # try to fix ESLint errors
-yarn lint:fix
+npm lint:fix
 
 # lint and watch for changes
-yarn lint:watch
+npm lint:watch
 ```
 
 ## License
