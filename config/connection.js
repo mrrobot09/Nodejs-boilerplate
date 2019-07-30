@@ -24,7 +24,8 @@ db
         console.log('\n\tConnection has been established successfully.');
     })
     .catch(err => {
-        console.error('Unable to connect to the database:', err);
+        console.log(err);
+        console.error('Unable to connect to the database:');
     });
 
 

@@ -38,11 +38,11 @@ function signIn(req, res, next) {
             replacements: {param: username},
             type: sequelize.QueryTypes.SELECT,
             logging: false,
-        }).then( function (user) {
-            if(user.length === 0) {
+        }).then(function (user) {
+            if (user.length === 0) {
                 helperFunction.apiReponse({}, config.errors.user_not_found, true, 200, res)
             } else {
-                let hash = crypto.createHash('sha256').update(password).digest('base64');
+                let hashPassword = crypto.createHash('sha256').update(password).digest('base64');
 
                 responseObject.id = user[0].id;
                 responseObject.first_name = user[0].first_name;
@@ -71,9 +71,9 @@ function signIn(req, res, next) {
 
                 responseObject.token = token;
 
-                if(user[0].password === null) {
+                if (user[0].password === null) {
                     helperFunction.apiReponse({}, config.errors.set_new_Password, true, 200, res)
-                } else if(hash === user[0].password) {
+                } else if (hashPassword === user[0].password) {
                     helperFunction.apiReponse(responseObject, 'User logged in successfully', false, 200, res)
                 } else {
                     helperFunction.apiReponse({}, config.errors.password_not_match, true, 200, res)
@@ -81,7 +81,7 @@ function signIn(req, res, next) {
             }
             return null;
         }).catch(function (err) {
-            console.log(err)
+            console.log(err);
             helperFunction.apiReponse({}, config.errors.db_error, true, 400, res)
         })
     }
@@ -136,7 +136,51 @@ function signUp(req, res, next) {
     }
 }
 
+function changePassword(req, res, next) {
+    let id = req.body.id;
+    let email = req.body.email;
+    let oldPassword = req.body.old_password;
+    let newPassword = req.body.new_password;
+
+    //authenticate encrypted passwords
+    let hashOldPassword = crypto.createHash('sha256').update(oldPassword).digest('base64');
+    let hashNewPassword = crypto.createHash('sha256').update(newPassword).digest('base64');
+
+    db.query(queries.checkEmailCellPhone('idEmailPassword'), {
+        replacements: {
+            id: id,
+            email: email,
+            oldPassword: hashOldPassword
+        },
+        type: sequelize.QueryTypes.SELECT,
+        logging: false
+    }).then(function (user) {
+        if (user.length && user[0].password === hashOldPassword) {
+            db.query(queries.changePassword(), {
+                replacements: {
+                    email: email,
+                    password: hashNewPassword
+                },
+                type: sequelize.QueryTypes.UPDATE,
+                logging: false
+            }).then(function (user) {
+                helperFunction.apiReponse({}, config.success.password_changed, false, 200, res)
+            }).catch(function (err) {
+                console.log(err);
+                helperFunction.apiReponse({}, config.errors.db_error, false, 400, res)
+            })
+        } else {
+            helperFunction.apiReponse({}, 'Your Old password is incorrect', false, 200, res)
+        }
+        return null;
+    }).catch(function (err) {
+        console.log(err);
+        helperFunction.apiReponse({}, config.errors.db_error, false, 400, res)
+    })
+}
+
 module.exports = {
     signIn,
-    signUp
+    signUp,
+    changePassword
 };

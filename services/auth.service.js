@@ -46,7 +46,7 @@ let authServiceMethods = {
                 helperFunction.apiReponse({}, config.errors.user_already_exists, false, 200, res)
             }
         }).catch(function (err) {
-            console.log(err)
+            console.log(err);
             helperFunction.apiReponse({}, config.errors.db_error, true, 400, res)
         })
     }

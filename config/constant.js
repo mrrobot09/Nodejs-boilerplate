@@ -2,6 +2,6 @@ module.exports =
     {
         DB_HOST: 'localhost',
         DB_USER: 'root',
-        DB_PASSWORD: '12345',
-        DB_DATABASE: 'test_database'
+        DB_PASSWORD: 'usman123',
+        DB_DATABASE: 'project_node'
     };
