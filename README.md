@@ -36,7 +36,7 @@ cd Nodejs-boilerplate
 Install dependencies:
 
 ```bash
-npm
+npm i
 ```
 
 ## Running Locally
